@@ -35,7 +35,6 @@ public class SearchObj {
 		this.isDateLimit = isDateLimit;
 		this.resultLimit = resultLimit;
 		this.resultOffset = resultOffset;
-		System.out.println(this);
 	}
 
 	public SortBy getSortBy() {
