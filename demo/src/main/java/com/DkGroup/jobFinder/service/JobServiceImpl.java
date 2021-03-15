@@ -79,7 +79,10 @@ public class JobServiceImpl implements JobService {
 		queryString+=(locationArea!=null?"location_area IN ("+locationArea+")":" 1=1 ")+" AND ";
 		queryString+=(jobTypes!=null&&!jobTypes.contains("all types")?"positions_category.name IN ("+jobTypes+")":" 1=1 ")+" AND ";
 		queryString+=(searchObj.isDateLimit()?"jobs.start_date BETWEEN current_date - integer '7' AND current_date":" 1=1 ");
-		queryString+=(sortBy!=null?("ORDER BY jobs."+sortBy.getAttribute()+" "+ (sortBy.isAscending() ? "ASC" : "DESC")):"ORDER BY jobs.start_date");
+		queryString+=(sortBy!=null?(" ORDER BY jobs."+sortBy.getAttribute()+" "+ (sortBy.isAscending() ? "ASC" : "DESC")):"ORDER BY jobs.start_date");
+		queryString+=(searchObj.getResultLimit()!=-1?" Limit "+searchObj.getResultLimit()+" ":"");
+
+		
 		
 		System.out.println("search \n"+queryString);
 		Query searchQuery=entityManager.createNativeQuery(queryString,ResultJob.class);

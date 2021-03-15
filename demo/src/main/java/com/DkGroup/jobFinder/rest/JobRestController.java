@@ -99,6 +99,7 @@ public class JobRestController {
 	@PostMapping("/search")
 	public List<ResultJob> searchJob(@RequestBody SearchObj searchObj)
 	{
+		System.out.println(searchObj);
 		List<ResultJob> jobs=jobService.searchJob(searchObj);
 		return jobs;
 	}
