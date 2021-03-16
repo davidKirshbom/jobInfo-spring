@@ -32,7 +32,7 @@ import com.DkGroup.jobFinder.utils.SearchObj;
 
 @RestController
 @RequestMapping("/job")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins="http://jobinfo-spring-prod.s3-website-eu-west-1.amazonaws.com")
 public class JobRestController {
 
 	private JobService jobService;
