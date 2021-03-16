@@ -12,7 +12,7 @@ import com.DkGroup.jobFinder.service.PositionService;
 
 @RestController
 @RequestMapping(path = "/position")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins="http://jobinfo-spring-prod.s3-website-eu-west-1.amazonaws.com")
 public class PositionRestController {
 
 	private PositionService positionService;
