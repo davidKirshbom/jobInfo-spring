@@ -23,7 +23,7 @@ import com.DkGroup.jobFinder.entity.ResultJob;
 import com.DkGroup.jobFinder.service.AgentService;
 @RestController
 @RequestMapping("/agents")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins="http://jobinfo-spring-prod.s3-website-eu-west-1.amazonaws.com")
 public class AgentRestController {
 	private AgentService agentService;
 	@Autowired
