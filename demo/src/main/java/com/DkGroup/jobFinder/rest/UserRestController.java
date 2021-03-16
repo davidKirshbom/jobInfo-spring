@@ -26,7 +26,7 @@ import com.DkGroup.jobFinder.utils.UserTokenWrapper;
 
 @RestController
 @RequestMapping("/users")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins="http://jobinfo-spring-prod.s3-website-eu-west-1.amazonaws.com")
 public class UserRestController {
 
 	private UserService userService;
