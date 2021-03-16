@@ -20,7 +20,7 @@ import com.DkGroup.jobFinder.utils.UserTokenWrapper;
 
 @RestController
 @RequestMapping("/company")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins="http://jobinfo-spring-prod.s3-website-eu-west-1.amazonaws.com")
 public class CompanyRestController {
 	private CompanyService companyService;
 	
